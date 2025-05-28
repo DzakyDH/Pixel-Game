@@ -2,70 +2,102 @@ using UnityEngine;
 
 public class Ally : Characterbase
 {
-    public LayerMask AllyLayer;
+    public LayerMask enemyLayer;
+    public float detectionRange = 5f;  // Jarak untuk mulai mengejar musuh
+    public float stopDistance = 0.5f;  // Jarak minimum sebelum berhenti
+    public float attackRanged = 1.5f;   // Jarak untuk menyerang
+
     private void Update()
     {
         if (isDead) return;
 
-        // Cari musuh dalam jangkauan
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, attackRange, AllyLayer);
-        if (hit != null)
+        // Cari musuh dalam jarak deteksi
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, detectionRange, enemyLayer);
+        if (hit != null && hit.transform != transform)
         {
             target = hit.transform;
 
-            Vector2 dir = (target.position - transform.position).normalized;
-            rb.linearVelocity = dir * moveSpeed;
+            float distance = Vector2.Distance(transform.position, target.position);
 
-            if (anim != null)
+            if (distance > stopDistance)
             {
-                Movetowards(target);
+                MoveTowards(target);
+            }
+            else
+            {
+                StopMoving();
             }
 
-            // Serang jika sudah cukup waktu
-            if (CanAttack())
+            // Serang jika dalam jarak serangan dan cooldown selesai
+            if (distance <= attackRange && CanAttack())
             {
-                rb.linearVelocity = Vector2.zero;
+                StopMoving();
                 Attack();
             }
         }
         else
         {
             target = null;
-            rb.linearVelocity = Vector2.zero;
-
-            if (anim != null)
-            {
-                anim.SetBool("IsRunning", false);
-            }
+            StopMoving();
         }
     }
-    private void Movetowards(Transform target)
+
+    private void MoveTowards(Transform target)
     {
         Vector2 direction = (target.position - transform.position).normalized;
         rb.linearVelocity = direction * moveSpeed;
-        if (anim != null) anim.SetBool("isRunning", true);
+
+        if (anim != null)
+            anim.SetBool("IsRunning", true);
     }
+
+    private void StopMoving()
+    {
+        rb.linearVelocity = Vector2.zero;
+
+        if (anim != null)
+            anim.SetBool("IsRunning", false);
+    }
+
     protected override void Attack()
     {
         lastAttackTime = Time.time;
-        if (anim != null) anim.SetTrigger("Attack");
-        if (target.TryGetComponent<Characterbase>(out var ally)) ally.TakeDamage(attackPower);
+
+        if (anim != null)
+            anim.SetTrigger("Attack");
+
+        if (target != null && target != transform)
+        {
+            if (target.TryGetComponent<Characterbase>(out var enemy))
+            {
+                enemy.TakeDamage(attackPower);
+            }
+        }
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"{gameObject.name} mendeteksi {other.name}");
-        if (other.CompareTag("Enemy")) target = other.transform;
+        if (other.CompareTag("Enemy"))
+        {
+            Debug.Log($"{gameObject.name} mendeteksi {other.name}");
+            target = other.transform;
+        }
     }
+
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.transform == target)
         {
             target = null;
-            if (anim != null) anim.SetBool("IsRunning", false);
+            StopMoving();
         }
     }
+
     private void OnDrawGizmosSelected()
     {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
+
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }

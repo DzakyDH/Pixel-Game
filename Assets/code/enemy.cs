@@ -1,72 +1,110 @@
-using Unity.VisualScripting;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class Enemy : Characterbase
 {
     public LayerMask enemyLayer;
+    public float detectionRange = 5f; // Jarak deteksi musuh
+    public float stopDistance = 0.5f; // Jarak minimum ke target sebelum berhenti
+    public float attackRanged = 1.5f;   // Jarak serang
+    private bool facingRight = true;
+
     private void Update()
     {
         if (isDead) return;
 
-        // Cari musuh dalam jangkauan
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, attackRange, enemyLayer);
-        if (hit != null)
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, detectionRange, enemyLayer);
+        if (hit != null && hit.transform != transform)
         {
             target = hit.transform;
 
-            Vector2 dir = (target.position - transform.position).normalized;
-            rb.linearVelocity = dir * moveSpeed;
+            float distance = Vector2.Distance(transform.position, target.position);
 
-            if (anim != null)
+            if (distance > stopDistance)
             {
                 MoveTowards(target);
             }
-
-            // Serang jika sudah cukup waktu
-            if (CanAttack())
+            else
             {
-                rb.linearVelocity = Vector2.zero;
+                StopMoving();
+            }
+
+            if (distance <= attackRange && CanAttack())
+            {
+                StopMoving();
                 Attack();
             }
         }
         else
         {
             target = null;
-            rb.linearVelocity = Vector2.zero;
+            StopMoving();
+        }
+    }
 
-            if (anim != null)
+    private void MoveTowards(Transform target)
+    {
+        Vector2 direction = (target.position - transform.position).normalized;
+        rb.linearVelocity = direction * moveSpeed;
+        Flip(direction.x);
+        if (anim != null) anim.SetBool("IsRunning", true);
+    }
+
+    private void StopMoving()
+    {
+        rb.linearVelocity = Vector2.zero;
+        if (anim != null) anim.SetBool("IsRunning", false);
+    }
+
+    protected override void Attack()
+    {
+        lastAttackTime = Time.time;
+
+        if (anim != null)
+            anim.SetTrigger("Attack");
+
+        if (target != null && target != transform)
+        {
+            if (target.TryGetComponent<Characterbase>(out var ally))
             {
-                anim.SetBool("IsRunning", false);
+                ally.TakeDamage(attackPower);
             }
         }
     }
-    private void MoveTowards(Transform targer)
+    private void Flip(float moveX)
     {
-        Vector2 direction = (target.position - targer.position).normalized;
-        rb.linearVelocity = direction * moveSpeed;
-        if (anim == null) anim.SetBool("isRunning", true);
+        if ((moveX > 0 && !facingRight) || (moveX < 0 && facingRight))
+        {
+            facingRight = !facingRight;
+            Vector3 scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
+        }
     }
-    protected override void Attack()
-    {
-      lastAttackTime = Time.time;
-        if (anim != null) anim.SetTrigger("Attack");
-        if (target.TryGetComponent<Characterbase>(out var ally)) ally.TakeDamage(attackPower);
-    }
-    private void OnTriggerEnter2D(Collider2D other)
+
+        private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log($"{gameObject.name} mendeteksi {other.name}");
-        if (other.CompareTag("Ally")) target = other.transform;
+        if (other.CompareTag("Ally"))
+        {
+            target = other.transform;
+        }
     }
+
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.transform == target)
         {
             target = null;
-            if (anim != null) anim.SetBool("isRunning", false);
+            StopMoving();
         }
     }
+
     private void OnDrawGizmosSelected()
     {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
+
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
