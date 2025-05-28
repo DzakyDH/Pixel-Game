@@ -1,14 +1,15 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Ally : Characterbase
+public class Enemy : Characterbase
 {
-    public LayerMask AllyLayer;
+    public LayerMask enemyLayer;
     private void Update()
     {
         if (isDead) return;
 
         // Cari musuh dalam jangkauan
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, attackRange, AllyLayer);
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, attackRange, enemyLayer);
         if (hit != null)
         {
             target = hit.transform;
@@ -18,7 +19,7 @@ public class Ally : Characterbase
 
             if (anim != null)
             {
-                Movetowards(target);
+                MoveTowards(target);
             }
 
             // Serang jika sudah cukup waktu
@@ -39,29 +40,29 @@ public class Ally : Characterbase
             }
         }
     }
-    private void Movetowards(Transform target)
+    private void MoveTowards(Transform targer)
     {
-        Vector2 direction = (target.position - transform.position).normalized;
+        Vector2 direction = (target.position - targer.position).normalized;
         rb.linearVelocity = direction * moveSpeed;
-        if (anim != null) anim.SetBool("isRunning", true);
+        if (anim == null) anim.SetBool("isRunning", true);
     }
     protected override void Attack()
     {
-        lastAttackTime = Time.time;
+      lastAttackTime = Time.time;
         if (anim != null) anim.SetTrigger("Attack");
         if (target.TryGetComponent<Characterbase>(out var ally)) ally.TakeDamage(attackPower);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log($"{gameObject.name} mendeteksi {other.name}");
-        if (other.CompareTag("Enemy")) target = other.transform;
+        if (other.CompareTag("Ally")) target = other.transform;
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.transform == target)
         {
             target = null;
-            if (anim != null) anim.SetBool("IsRunning", false);
+            if (anim != null) anim.SetBool("isRunning", false);
         }
     }
     private void OnDrawGizmosSelected()

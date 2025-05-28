@@ -37,7 +37,22 @@ public class Characterbase : MonoBehaviour
     }
     protected virtual void Attack()
     {
-
+        if (anim != null)
+        {
+            anim.SetTrigger("Attack");
+        }
+        if (target != null)
+        {
+            if (target.TryGetComponent<Characterbase>(out Characterbase enemy))
+            {
+                enemy.TakeDamage(attackPower);
+            }
+            if (enemy != null)
+            {
+                enemy.TakeDamage(attackPower);
+            }
+        }
+        lastAttackTime = Time.time;
     }
     protected bool CanAttack()
     {
