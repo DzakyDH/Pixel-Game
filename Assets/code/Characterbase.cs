@@ -58,4 +58,13 @@ public class Characterbase : MonoBehaviour
     {
         return Time.time - lastAttackTime >= this.attackCooldown;
     }
+    protected void FaceTarget(Vector3 targetPosition)
+    {
+        Vector3 scale = transform.localScale;
+        if (targetPosition.x < transform.position.x)
+            scale.x = -Mathf.Abs(scale.x); // Menghadap kiri
+        else
+            scale.x = Mathf.Abs(scale.x); // Menghadap kanan
+        transform.localScale = scale;
+    }
 }

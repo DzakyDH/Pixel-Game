@@ -22,6 +22,7 @@ public class Ally : Characterbase
             if (distance > stopDistance)
             {
                 MoveTowards(target);
+                FaceTarget(target.position);
             }
             else
             {
