@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class HealtBarUI : MonoBehaviour
 {
     public Image fillImage;
+    public RectTransform rectTransform;
 
     public void SetHealth(float current, float max)
     {
@@ -12,7 +13,8 @@ public class HealtBarUI : MonoBehaviour
     }
     public void UpdatePosition(Vector3 worldPosition)
     {
-        transform.position = Camera.main.WorldToScreenPoint(worldPosition);
+        Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPosition);
+        rectTransform.position = screenPos;
     }
 
 }
