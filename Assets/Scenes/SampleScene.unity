@@ -541,12 +541,15 @@ MonoBehaviour:
   attackRange: 1
   attackCooldown: 2
   moveSpeed: 2
+  healthBar: {fileID: 0}
+  maxHealth: 100
   enemyLayer:
     serializedVersion: 2
     m_Bits: 16384
   detectionRange: 20
   stopDistance: 1
   attackRanged: 1
+  healthBarPrefab: {fileID: 0}
 --- !u!95 &376130690
 Animator:
   serializedVersion: 7
@@ -1047,6 +1050,9 @@ MonoBehaviour:
   attackRange: 1.5
   attackCooldown: 1.5
   moveSpeed: 2
+  healthBar: {fileID: 0}
+  maxHealth: 100
+  healthBarPrefab: {fileID: 0}
 --- !u!61 &695445440
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1751,12 +1757,15 @@ MonoBehaviour:
   attackRange: 1
   attackCooldown: 2
   moveSpeed: 2
+  healthBar: {fileID: 0}
+  maxHealth: 100
   enemyLayer:
     serializedVersion: 2
     m_Bits: 32768
   detectionRange: 20
   stopDistance: 1
   attackRanged: 1
+  healthBarPrefab: {fileID: 0}
 --- !u!95 &1185505370
 Animator:
   serializedVersion: 7

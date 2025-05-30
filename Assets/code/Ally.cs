@@ -6,12 +6,24 @@ public class Ally : Characterbase
     public float detectionRange = 5f;  // Jarak untuk mulai mengejar musuh
     public float stopDistance = 0.5f;  // Jarak minimum sebelum berhenti
     public float attackRanged = 1.5f;   // Jarak untuk menyerang
+    public GameObject healthBarPrefab;
+    private HealtBarUI HealthBar;
 
+
+    protected virtual void Start()
+    {
+        GameObject bar = Instantiate(healthBarPrefab, GameObject.Find("Canvas").transform);
+        healthBar = bar.GetComponent<HealtBarUI>();
+    }
     private void Update()
     {
         if (isDead) return;
 
-        // Cari musuh dalam jarak deteksi
+        if (HealthBar != null)
+        {
+            HealthBar.UpdatePosition(transform.position + Vector3.up * 1.5f);
+        }
+
         Collider2D hit = Physics2D.OverlapCircle(transform.position, detectionRange, enemyLayer);
         if (hit != null && hit.transform != transform)
         {

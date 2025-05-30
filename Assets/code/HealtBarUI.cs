@@ -9,5 +9,10 @@ public class HealtBarUI : MonoBehaviour
     {
         float fill = current / max;
         fillImage.fillAmount = fill;
-    }    
+    }
+    public void UpdatePosition(Vector3 worldPosition)
+    {
+        transform.position = Camera.main.WorldToScreenPoint(worldPosition);
+    }
+
 }

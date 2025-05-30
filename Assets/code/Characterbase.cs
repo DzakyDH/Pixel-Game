@@ -32,7 +32,7 @@ public class Characterbase : MonoBehaviour
     {
         if (isDead) return;
 
-        currentHealth -= amount;
+        currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
         if (healthBar != null)
