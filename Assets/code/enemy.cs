@@ -1,4 +1,3 @@
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class Enemy : Characterbase
@@ -13,11 +12,10 @@ public class Enemy : Characterbase
     {
         if (isDead) return;
 
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, detectionRange, enemyLayer);
-        if (hit != null && hit.transform != transform)
-        {
-            target = hit.transform;
+        FindNearestTarget();
 
+        if (target != null && target != transform)
+        {
             float distance = Vector2.Distance(transform.position, target.position);
 
             if (distance > stopDistance)
@@ -37,7 +35,6 @@ public class Enemy : Characterbase
         }
         else
         {
-            target = null;
             StopMoving();
         }
     }
@@ -98,6 +95,27 @@ public class Enemy : Characterbase
             target = null;
             StopMoving();
         }
+    }
+    private void FindNearestTarget()
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, detectionRange, enemyLayer);
+
+        float closestDistance = float.MaxValue;
+        Transform nearest = null;
+
+        foreach (Collider2D hit in hits)
+        {
+            if (hit.transform == transform) continue;
+
+            float dist = Vector2.Distance(transform.position, hit.transform.position);
+            if (dist < closestDistance)
+            {
+                closestDistance = dist;
+                nearest = hit.transform;
+            }
+        }
+
+        target = nearest;
     }
 
     private void OnDrawGizmosSelected()
