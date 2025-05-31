@@ -4,22 +4,11 @@ public class Player : Characterbase
 {
     private bool moveLeft;
     private bool moveRight;
-    public GameObject healthBarPrefab;
-    private HealtBarUI HealthBar;
 
-    protected virtual void Start()
-    {
-        GameObject bar = Instantiate(healthBarPrefab, GameObject.Find("Canvas").transform);
-        healthBar = bar.GetComponent<HealtBarUI>();
-    }
+
     private void Update()
     {
         if (isDead) return;
-
-        if (HealthBar != null)
-        {
-            HealthBar.UpdatePosition(transform.position + Vector3.up * 1.5f);
-        }
         HandleMovement();
     }
 

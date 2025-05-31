@@ -6,26 +6,14 @@ public class Enemy : Characterbase
     public float detectionRange = 5f; // Jarak deteksi musuh
     public float stopDistance = 0.5f; // Jarak minimum ke target sebelum berhenti
     public float attackRanged = 1.5f;   // Jarak serang
-    public GameObject healthBarPrefab;
-    private HealtBarUI HealthBar;
     private bool facingRight = true;
 
 
-    protected virtual void Start()
-    {
-        GameObject bar = Instantiate(healthBarPrefab, GameObject.Find("Canvas").transform);
-        healthBar = bar.GetComponent<HealtBarUI>();
-    }
     private void Update()
     {
         if (isDead) return;
 
         FindNearestTarget();
-
-        if (HealthBar != null)
-        {
-            HealthBar.UpdatePosition(transform.position + Vector3.up * 1.5f);
-        }
 
         if (target != null && target != transform)
         {

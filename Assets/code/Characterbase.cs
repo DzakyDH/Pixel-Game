@@ -8,9 +8,7 @@ public class Characterbase : MonoBehaviour
     public float attackRange = 1.5f;
     public float attackCooldown = 1.5f;
     public float moveSpeed = 2f;
-    public HealtBarUI healthBar;
     public float maxHealth = 100f;
-    private float currentHealth;
 
     protected float lastAttackTime;
     protected Rigidbody2D rb;
@@ -22,23 +20,10 @@ public class Characterbase : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-
-        currentHealth = maxHealth;
-
-        if (healthBar != null)
-            healthBar.SetHealth(currentHealth, maxHealth);
     }
     public virtual void TakeDamage(float damage)
     {
         if (isDead) return;
-
-        currentHealth -= damage;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-
-        if (healthBar != null)
-            healthBar.SetHealth(currentHealth, maxHealth);
-
-        if (currentHealth <= 0)
             Die();
     }
     protected virtual void Die()
