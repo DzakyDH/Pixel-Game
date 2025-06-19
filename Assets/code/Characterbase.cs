@@ -20,11 +20,17 @@ public class Characterbase : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        health = maxHealth;
     }
     public virtual void TakeDamage(float damage)
     {
-        if (isDead) return;
+        health -= damage;
+
+        if (health <= 0)
+        {
             Die();
+        }
     }
     protected virtual void Die()
     {
@@ -42,9 +48,7 @@ public class Characterbase : MonoBehaviour
         {
             anim.SetTrigger("Attack");
         }
-        if (target != null)
-        {
-            if (target.TryGetComponent<Characterbase>(out Characterbase enemy))
+        if (target.TryGetComponent<Characterbase>(out Characterbase enemy))
             {
                 enemy.TakeDamage(attackPower);
             }
@@ -52,7 +56,6 @@ public class Characterbase : MonoBehaviour
             {
                 enemy.TakeDamage(attackPower);
             }
-        }
         lastAttackTime = Time.time;
     }
     protected bool CanAttack()

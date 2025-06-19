@@ -63,9 +63,13 @@ public class Enemy : Characterbase
 
         if (target != null && target != transform)
         {
-            if (target.TryGetComponent<Characterbase>(out var ally))
+            if (target.TryGetComponent<Ally>(out var ally))
             {
                 ally.TakeDamage(attackPower);
+            }
+            if (target.TryGetComponent<Player>(out var player))
+            {
+                player.TakeDamage(attackPower);
             }
         }
     }

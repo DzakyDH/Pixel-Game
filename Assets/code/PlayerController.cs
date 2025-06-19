@@ -59,7 +59,7 @@ public class Player : Characterbase
         Vector2 direction = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, attackRange, LayerMask.GetMask("Enemy"));
-        if (hit.collider != null && hit.collider.TryGetComponent<Characterbase>(out var enemy))
+        if (hit.collider != null && hit.collider.TryGetComponent<Enemy>(out var enemy))
         {
             enemy.TakeDamage(attackPower);
         }

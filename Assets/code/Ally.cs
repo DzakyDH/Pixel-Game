@@ -11,35 +11,31 @@ public class Ally : Characterbase
     {
         if (isDead) return;
 
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, detectionRange, enemyLayer);
-        if (hit != null && hit.transform != transform)
-        {
-            target = hit.transform;
+        FindNearestTarget();
 
-            float distance = Vector2.Distance(transform.position, target.position);
-
-            if (distance > stopDistance)
+        if (target != null && target != transform)
             {
-                MoveTowards(target);
-                FaceTarget(target.position);
+                float distance = Vector2.Distance(transform.position, target.position);
+
+                if (distance > stopDistance)
+                {
+                    MoveTowards(target);
+                }
+                else
+                {
+                    StopMoving();
+                }
+
+                if (distance <= attackRange && CanAttack())
+                {
+                    StopMoving();
+                    Attack();
+                }
             }
             else
             {
                 StopMoving();
             }
-
-            // Serang jika dalam jarak serangan dan cooldown selesai
-            if (distance <= attackRange && CanAttack())
-            {
-                StopMoving();
-                Attack();
-            }
-        }
-        else
-        {
-            target = null;
-            StopMoving();
-        }
     }
 
     private void MoveTowards(Transform target)
@@ -68,7 +64,7 @@ public class Ally : Characterbase
 
         if (target != null && target != transform)
         {
-            if (target.TryGetComponent<Characterbase>(out var enemy))
+            if (target.TryGetComponent<Enemy>(out var enemy))
             {
                 enemy.TakeDamage(attackPower);
             }
@@ -83,6 +79,28 @@ public class Ally : Characterbase
             target = other.transform;
         }
     }
+    private void FindNearestTarget()
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, detectionRange, enemyLayer);
+
+        float closestDistance = float.MaxValue;
+        Transform nearest = null;
+
+        foreach (Collider2D hit in hits)
+        {
+            if (hit.transform == transform) continue;
+
+            float dist = Vector2.Distance(transform.position, hit.transform.position);
+            if (dist < closestDistance)
+            {
+                closestDistance = dist;
+                nearest = hit.transform;
+            }
+        }
+
+        target = nearest;
+    }
+
 
     private void OnTriggerExit2D(Collider2D other)
     {

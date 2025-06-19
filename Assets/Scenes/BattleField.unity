@@ -951,7 +951,7 @@ GameObject:
   - component: {fileID: 695445439}
   m_Layer: 14
   m_Name: Player
-  m_TagString: Ally
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
