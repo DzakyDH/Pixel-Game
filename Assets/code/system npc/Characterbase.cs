@@ -15,6 +15,7 @@ public class Characterbase : MonoBehaviour
     protected Animator anim;
     protected Transform target;
     protected bool isDead = false;
+    protected bool isRetreating = false;
 
     protected virtual void Awake()
     {
@@ -35,6 +36,11 @@ public class Characterbase : MonoBehaviour
     protected virtual void Die()
     {
         isDead = true;
+        if (CompareTag("Enemy"))
+            RetreatManajer.Instance?.AddEnemyKilled();
+        else if (CompareTag("Ally") || CompareTag("Player"))
+            RetreatManajer.Instance?.AddAllyLost();
+
         if (anim != null)
         {
             anim.SetTrigger("Die");
@@ -49,10 +55,6 @@ public class Characterbase : MonoBehaviour
             anim.SetTrigger("Attack");
         }
         if (target.TryGetComponent<Characterbase>(out Characterbase enemy))
-            {
-                enemy.TakeDamage(attackPower);
-            }
-            if (enemy != null)
             {
                 enemy.TakeDamage(attackPower);
             }

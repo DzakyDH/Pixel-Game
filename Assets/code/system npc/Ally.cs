@@ -110,7 +110,6 @@ public class Ally : Characterbase
             StopMoving();
         }
     }
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
