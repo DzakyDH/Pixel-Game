@@ -35,7 +35,9 @@ public class Characterbase : MonoBehaviour
     }
     protected virtual void Die()
     {
+        if (isDead) return;
         isDead = true;
+
         if (CompareTag("Enemy"))
             RetreatManajer.Instance?.AddEnemyKilled();
         else if (CompareTag("Ally") || CompareTag("Player"))
