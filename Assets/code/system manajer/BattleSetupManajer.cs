@@ -15,6 +15,14 @@ public class BattleSetupManajer : MonoBehaviour
     public Transform enemySpawnPoint;
     public Transform PlayerSpawnPoint;
 
+    public Text allyCountText;
+    public Text enemyCountText;
+
+    private void Update()
+    {
+        allyCountText.text = allySlider.value.ToString();
+        enemyCountText.text = enemySlider.value.ToString();
+    }
     public void StartBattle()
     {
         int allyCount = (int)allySlider.value;
