@@ -207,6 +207,6 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 16384
-  detectionRange: 20
+  detectionRange: 100
   stopDistance: 1
   attackRanged: 1
