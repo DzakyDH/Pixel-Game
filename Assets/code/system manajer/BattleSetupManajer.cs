@@ -41,6 +41,9 @@ public class BattleSetupManajer : MonoBehaviour
 
         GameObject playerObj = Instantiate(PlayerPrefab, PlayerSpawnPoint.position, Quaternion.identity);
         currentPlayer = playerObj.GetComponent<Player>();
+
+        Camera.main.GetComponent<CameraFollow>().target = playerObj.transform;
+
         for (int i = 0; i < allyCount; i++)
         {
             Vector3 offset = new Vector3 (i * 1.5f, 0, 0);
