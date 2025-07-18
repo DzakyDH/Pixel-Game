@@ -131,4 +131,11 @@ public class Enemy : Characterbase
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
+    private void OnDestroy()
+    {
+        if (VictoryManajer.instance != null)
+        {
+            VictoryManajer.instance.CheckEnemyRemaining();
+        }
+    }
 }

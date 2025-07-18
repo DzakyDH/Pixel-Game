@@ -39,10 +39,15 @@ public class Characterbase : MonoBehaviour
         isDead = true;
 
         if (CompareTag("Enemy"))
+        {
             RetreatManajer.Instance?.AddEnemyKilled();
+            VictoryManajer.instance.registerEnemyDeath();
+        }
         else if (CompareTag("Ally") || CompareTag("Player"))
+        {
             RetreatManajer.Instance?.AddAllyLost();
-
+            VictoryManajer.instance.registerAllyDeath();
+        }
         if (anim != null)
         {
             anim.SetTrigger("Die");

@@ -14,28 +14,28 @@ public class Ally : Characterbase
         FindNearestTarget();
 
         if (target != null && target != transform)
+        {
+            float distance = Vector2.Distance(transform.position, target.position);
+
+            if (distance > stopDistance)
             {
-                float distance = Vector2.Distance(transform.position, target.position);
-
-                if (distance > stopDistance)
-                {
-                    MoveTowards(target);
-                }
-                else
-                {
-                    StopMoving();
-                }
-
-                if (distance <= attackRange && CanAttack())
-                {
-                    StopMoving();
-                    Attack();
-                }
+                MoveTowards(target);
             }
             else
             {
                 StopMoving();
             }
+
+            if (distance <= attackRange && CanAttack())
+            {
+                StopMoving();
+                Attack();
+            }
+        }
+        else
+        {
+            StopMoving();
+        }
     }
 
     private void MoveTowards(Transform target)
