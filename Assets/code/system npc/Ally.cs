@@ -118,4 +118,11 @@ public class Ally : Characterbase
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
+    private void OnDestroy()
+    {
+        if (DefeatManajer.instance != null)
+        {
+            DefeatManajer.instance.CheckAllyRemaining();
+        }
+    }
 }

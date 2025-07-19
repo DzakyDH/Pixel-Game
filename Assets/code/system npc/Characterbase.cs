@@ -42,11 +42,13 @@ public class Characterbase : MonoBehaviour
         {
             RetreatManajer.Instance?.AddEnemyKilled();
             VictoryManajer.instance.registerEnemyDeath();
+            DefeatManajer.instance.registerEnemyDeath();
         }
         else if (CompareTag("Ally") || CompareTag("Player"))
         {
             RetreatManajer.Instance?.AddAllyLost();
             VictoryManajer.instance.registerAllyDeath();
+            DefeatManajer.instance.registerAllyDeath();
         }
         if (anim != null)
         {

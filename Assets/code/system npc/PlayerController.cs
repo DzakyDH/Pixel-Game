@@ -75,4 +75,11 @@ public class Player : Characterbase
 
         transform.localScale = scale;
     }
+    private void OnDestroy()
+    {
+        if (DefeatManajer.instance != null)
+        {
+            DefeatManajer.instance.CheckAllyRemaining();
+        }
+    }
 }
