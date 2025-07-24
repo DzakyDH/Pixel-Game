@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: afacd4a94b8303d4fa8b2732de3b7f03
+guid: 376693e6b7c62084bb0a2b3933749bfc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2805800487373231675
-    second: Barrack_0
+      213: 5362735838549604449
+    second: Food_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 12
+  spritePixelsToUnits: 13
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barrack_0
+      name: Food_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 12
-        width: 26
-        height: 15
+        x: 3
+        y: 8
+        width: 19
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b36df707da430f620800000000000000
-      internalID: 2805800487373231675
+      spriteID: 168710905d34c6a40800000000000000
+      internalID: 5362735838549604449
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Barrack_0: 2805800487373231675
+      Food_0: 5362735838549604449
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

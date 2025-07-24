@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: afacd4a94b8303d4fa8b2732de3b7f03
+guid: 8d1c6344c210fa64186f778ad458ddcc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2805800487373231675
-    second: Barrack_0
+      213: -7002676942891658769
+    second: CropField_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barrack_0
+      name: CropField_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 12
-        width: 26
-        height: 15
+        x: 3
+        y: 11
+        width: 34
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b36df707da430f620800000000000000
-      internalID: 2805800487373231675
+      spriteID: fe1df161c6e71de90800000000000000
+      internalID: -7002676942891658769
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Barrack_0: 2805800487373231675
+      CropField_0: -7002676942891658769
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
