@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8c8507263b0aa1b45af6a7f8fd88288b
+guid: c00d60f3bfd06884b9bd34251737724a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2051936663753818374
-    second: Castle 1_0
+      213: -5356574185940491189
+    second: Wall_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Castle 1_0
+      name: Wall_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 12
-        width: 16
-        height: 21
+        x: 18
+        y: 17
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60185a82681f97c10800000000000000
-      internalID: 2051936663753818374
+      spriteID: b446df18820a9a5b0800000000000000
+      internalID: -5356574185940491189
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Castle 1_0: 2051936663753818374
+      Wall_0: -5356574185940491189
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
