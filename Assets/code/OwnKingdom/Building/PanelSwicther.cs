@@ -8,11 +8,11 @@ public class PanelSwicther : MonoBehaviour
     public void ShowPanelA()
     {
         panelA.SetActive(true);
-        panelB.SetActive(false);
+        
     }
     public void ShowPanelB()
     {
-        panelA.SetActive(false);
-        panelB.SetActive(true);
+        panelA.SetActive(true);
+        
     }
 }

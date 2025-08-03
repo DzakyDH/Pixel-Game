@@ -5,7 +5,7 @@ public class SceneManagement : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("BattleField");
+        SceneManager.LoadScene("OwnKingdom");
     }
 
     // Update is called once per frame
