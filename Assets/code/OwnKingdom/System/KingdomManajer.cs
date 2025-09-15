@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using TMPro;
 public enum ResourceType
 {
     Coin,
@@ -11,36 +11,41 @@ public enum ResourceType
 }
 public class KingdomManajer : MonoBehaviour
 {
-    public static KingdomManajer Instance;
-    public int week = 1;
-    public int castleLevel = 1;
-    public int maxCastleLevel = 5;
-
-    public int coinIncreasedPerLevel = 200;
-    public DataBuilding castleBuilding;
-
+    public static KingdomManajer Instance { get; private set; }
 
     public int coin, iron, stone, wood, food, citizen;
     public int maxCoin, maxIron, maxStone, maxWood, maxFood, maxCitizen;
+    public int coinProduction, ironProduction, stoneProduction, woodProduction, foodProduction, citizenProduction;
+    public int week = 1;
 
-
+    public TMP_Text coinText, woodText, stoneText, ironText, foodText, citizenText, weekText;
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
+        if (Instance == null) Instance = this;
+
+        else Destroy(gameObject);
+
     }
-
-
+    private void Start()
+    {
+        UpdateUI();
+    }
+    public void AdvanceWeek()
+    {
+        week++;
+    }
+    public void ProduceResources()
+    {
+        AddResource(ResourceType.Coin, coinProduction);
+        AddResource(ResourceType.Wood, woodProduction);
+        AddResource(ResourceType.Stone, stoneProduction);
+        AddResource(ResourceType.Iron, ironProduction);
+        AddResource(ResourceType.Food, foodProduction);
+        AddResource(ResourceType.Citizen, citizenProduction);
+    }
     public void AddResource(ResourceType type, int amount)
     {
-        switch(type)
+        switch (type)
         {
             case ResourceType.Coin: coin = Mathf.Min(coin + amount, maxCoin); break;
             case ResourceType.Iron: iron = Mathf.Min(iron + amount, maxIron); break;
@@ -49,60 +54,44 @@ public class KingdomManajer : MonoBehaviour
             case ResourceType.Food: food = Mathf.Min(food + amount, maxFood); break;
             case ResourceType.Citizen: citizen = Mathf.Min(citizen + amount, maxCitizen); break;
         }
-
+        UpdateUI();
     }
-    public bool CanAfford(int coinCost, int woodCost, int stoneCost, int ironCost)
+    public bool HasEnoughResource(int coinCost, int woodCost, int stoneCost, int ironCost)
     {
         return coin >= coinCost &&
             wood >= woodCost &&
             stone >= stoneCost &&
             iron >= ironCost;
     }
-    public bool SpendResources(int coinCost, int woodCost, int stoneCost, int ironCost)
+    public void SpendResources(int coinCost, int woodCost, int stoneCost, int ironCost)
     {
+        coin -= coinCost;
+        wood -= woodCost;
+        stone -= stoneCost;
+        iron -= ironCost;
 
-        return coin >= coinCost &&
-               wood >= woodCost &&
-               stone >= stoneCost &&
-               iron >= ironCost;
-            
- 
+        UpdateUI();
     }
 
-    public void AdvanceWeek()
+    public void UpdateUI()
     {
-        week++;
-    }
-    public void UpgradeCastle()
-    {
-        if (castleLevel >= maxCastleLevel)
-        {
-            Debug.Log("Castle sudah di level maksimal");
-            return;
-        }
+        coinText.text = $"{coin}/{maxCoin}";
+        woodText.text = $"{wood}/{maxWood}";
+        stoneText.text = $"{stone}/{maxStone}";
+        ironText.text = $"{iron}/{maxStone}";
+        foodText.text = $"{food}/{maxStone}";
+        citizenText.text = $"{citizen}/{maxCitizen}";
+        weekText.text = $"Week {week}";
 
-        castleLevel++;
-        maxCoin += coinIncreasedPerLevel;
-
-        if (UpgradeUIManajer.Instance != null)
-        {
-            UpgradeUIManajer.Instance.RefreshAllBuildingButtons();
-        }
-        else
-        {
-#if UNITY_2023_1_OR_NEWER
-            var allUI = Object.FindObjectsByType<UpgradeUIManajer>(FindObjectsSortMode.None);
-            
-#else
-            var ui = FindObjectOfType<UpgradeUIManajer>();
-          
-#endif
-            foreach (var u in allUI) u.RefreshUI();
-        }
+        SetColor(coinText, coin >= maxCoin);
+        SetColor(woodText, wood >= maxWood);
+        SetColor(stoneText, stone >= maxStone);
+        SetColor(ironText, iron >= maxIron);
+        SetColor(foodText, food >= maxFood);
+        SetColor(citizenText, citizen >= maxCitizen);
     }
-    public int GetCastleLevel()
+    private void SetColor(TMP_Text text, bool isFull)
     {
-        return castleBuilding != null ? castleBuilding.level : castleLevel;
+        text.color = isFull ? Color.red : Color.white;
     }
 }
-

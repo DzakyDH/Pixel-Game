@@ -3,14 +3,15 @@ using UnityEngine.EventSystems;
 
 public class PanelBuildingClose : MonoBehaviour, IPointerDownHandler
 {
-    public GameObject panelToClose;
+    public GameObject panelTooClose;
     public GameObject ButtonTOOpen;
+    public GameObject PanelClose;
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(panelToClose != null && panelToClose.activeSelf)
+        if(panelTooClose != null && panelTooClose.activeSelf)
         {
-            panelToClose.SetActive(false);
+            PanelClose .SetActive(false);
             ButtonTOOpen.SetActive(true);
         }
     }

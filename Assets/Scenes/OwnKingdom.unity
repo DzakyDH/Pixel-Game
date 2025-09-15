@@ -1214,7 +1214,7 @@ RectTransform:
   m_Father: {fileID: 1046344937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.9975037, y: 1}
+  m_AnchorMax: {x: 0.9954503, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1256,17 +1256,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49644098}
   m_CullTransparentMesh: 1
---- !u!114 &54463973 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3165485716120329188, guid: 4c55e9ccee9fe9c488e771d706d1ccb2, type: 3}
-  m_PrefabInstance: {fileID: 736801492}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &56371602
 GameObject:
   m_ObjectHideFlags: 0
@@ -1385,7 +1374,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -304, y: 1}
+  m_AnchoredPosition: {x: -304, y: 3.2}
   m_SizeDelta: {x: 95.1311, y: 32.0749}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &56652163
@@ -1872,7 +1861,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 854747862}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PanelSwicther, Assembly-CSharp
         m_MethodName: ShowPanelB
         m_Mode: 1
@@ -2265,7 +2254,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 378.4, y: -0.000008940697}
+  m_AnchoredPosition: {x: 377.9, y: 2.4}
   m_SizeDelta: {x: 26.4918, y: 20.2466}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &106164665
@@ -2312,9 +2301,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 854747864}
-        m_TargetAssemblyTypeName: KingdomManajer, Assembly-CSharp
-        m_MethodName: OnNextWeekButtonPressed
+      - m_Target: {fileID: 854747863}
+        m_TargetAssemblyTypeName: TurnManajer, Assembly-CSharp
+        m_MethodName: NextTurn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2669,7 +2658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -375.9, y: 3.3528}
+  m_AnchoredPosition: {x: -375.6, y: 2.4}
   m_SizeDelta: {x: 35.586, y: 23.8824}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &125058213
@@ -2716,7 +2705,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 854747860}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ToggleMenuUI, Assembly-CSharp
         m_MethodName: ToggleMenu
         m_Mode: 1
@@ -2793,15 +2782,15 @@ RectTransform:
   m_GameObject: {fileID: 127620797}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1638558081}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.6093, y: 0}
-  m_SizeDelta: {x: 563.3765, y: 344.8842}
+  m_AnchoredPosition: {x: 0.4516, y: 3.0824}
+  m_SizeDelta: {x: 565.5017, y: 317.787}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &127620799
 MonoBehaviour:
@@ -3701,7 +3690,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27.7807, y: -0.3513}
+  m_AnchoredPosition: {x: -29.4, y: -0.3513}
   m_SizeDelta: {x: 24.5673, y: 20.7025}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &177490385
@@ -3741,6 +3730,97 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177490383}
+  m_CullTransparentMesh: 1
+--- !u!1 &178659665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 178659666}
+  - component: {fileID: 178659669}
+  - component: {fileID: 178659668}
+  - component: {fileID: 178659667}
+  m_Layer: 5
+  m_Name: CloseButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &178659666
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178659665}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 233381122}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -3.8862915, y: 5.3765}
+  m_SizeDelta: {x: -7.7726, y: -10.753}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &178659667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178659665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 660ae2d0839b07641b5cce8d1f60ecd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelTooClose: {fileID: 178659665}
+  ButtonTOOpen: {fileID: 1441658877}
+  PanelClose: {fileID: 233381121}
+--- !u!114 &178659668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178659665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &178659669
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178659665}
   m_CullTransparentMesh: 1
 --- !u!1 &179939934
 GameObject:
@@ -4818,8 +4898,6 @@ GameObject:
   m_Component:
   - component: {fileID: 233381122}
   - component: {fileID: 233381125}
-  - component: {fileID: 233381124}
-  - component: {fileID: 233381123}
   m_Layer: 5
   m_Name: PanelBuilding
   m_TagString: Untagged
@@ -4839,6 +4917,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 178659666}
   - {fileID: 1631711218}
   - {fileID: 965386472}
   m_Father: {fileID: 8996595}
@@ -4848,50 +4927,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1.7677994, y: 0.0000038146973}
   m_SizeDelta: {x: 734.92, y: 269.622}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &233381123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233381121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 660ae2d0839b07641b5cce8d1f60ecd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panelToClose: {fileID: 233381121}
-  ButtonTOOpen: {fileID: 1441658877}
---- !u!114 &233381124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233381121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: -2121255737086566026, guid: 4f8f8b38209e6894d9f22ce13ebeb97f, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &233381125
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5521,7 +5556,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 854747860}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ToggleMenuUI, Assembly-CSharp
         m_MethodName: CloseMenu
         m_Mode: 1
@@ -7427,17 +7462,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501100093}
   m_CullTransparentMesh: 1
---- !u!114 &505549220 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2761027951207825294, guid: 4c55e9ccee9fe9c488e771d706d1ccb2, type: 3}
-  m_PrefabInstance: {fileID: 736801492}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &506067688
 GameObject:
   m_ObjectHideFlags: 0
@@ -9216,17 +9240,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &571422335 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7562503288897690074, guid: 4c55e9ccee9fe9c488e771d706d1ccb2, type: 3}
-  m_PrefabInstance: {fileID: 736801492}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &581299119
 GameObject:
   m_ObjectHideFlags: 0
@@ -10724,31 +10737,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340ffd7dd0ff29447a45a62051d2cf56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingData:
-    buildingName: 
-    level: 0
-    maxLevel: 10
-    coinCosts: 
-    woodCosts: 
-    stoneCosts: 
-    ironCosts: 
-    productionPerlevel: 
-    maxResourcePerLevel: 
-    maxCtizenPerLevel: 
-    soldierLevelPerLevel: 
-    maxTroopsPerLevel: 
-    wallHPPerLevel: 
-  currentLevelText: {fileID: 1581012416}
-  nextLevelText: {fileID: 1834376851}
-  coinCostText: {fileID: 571422335}
-  woodCostText: {fileID: 1096773072}
-  stoneCostText: {fileID: 505549220}
-  ironCostText: {fileID: 815933043}
-  currentProdText1: {fileID: 1819470997}
-  nextProdText1: {fileID: 932550852}
-  currentProdText2: {fileID: 968110425}
-  nextProdText2: {fileID: 54463973}
-  upgradeButton: {fileID: 779086594}
 --- !u!1 &753691004
 GameObject:
   m_ObjectHideFlags: 0
@@ -10997,17 +10985,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763631062}
   m_CullTransparentMesh: 1
---- !u!114 &779086594 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 486246098802764373, guid: 4c55e9ccee9fe9c488e771d706d1ccb2, type: 3}
-  m_PrefabInstance: {fileID: 736801492}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &780555179
 GameObject:
   m_ObjectHideFlags: 0
@@ -11315,17 +11292,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791560894}
   m_CullTransparentMesh: 1
---- !u!114 &815933043 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4982166775565089581, guid: 4c55e9ccee9fe9c488e771d706d1ccb2, type: 3}
-  m_PrefabInstance: {fileID: 736801492}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &818558548
 GameObject:
   m_ObjectHideFlags: 0
@@ -11775,10 +11741,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 854747861}
-  - component: {fileID: 854747860}
+  - component: {fileID: 854747863}
   - component: {fileID: 854747862}
-  - component: {fileID: 854747864}
-  - component: {fileID: 854747865}
   m_Layer: 0
   m_Name: Manajer
   m_TagString: Untagged
@@ -11786,19 +11750,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &854747860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 854747859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d71001e1ee8c0146896f5d8e3c0b356, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MenuPanel: {fileID: 1752327321}
 --- !u!4 &854747861
 Transform:
   m_ObjectHideFlags: 0
@@ -11823,54 +11774,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 854747859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d844d447ed930944c8f4314c03fe35e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panelA: {fileID: 233381121}
-  panelB: {fileID: 1638558080}
---- !u!114 &854747864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 854747859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53c4709b568940e4b8746612e2966a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  week: 1
-  castleLevel: 1
-  maxCastleLevel: 5
-  coinIncreasedPerLevel: 200
-  castleBuilding:
-    buildingName: 
-    level: 0
-    maxLevel: 10
-    coinCosts: 
-    woodCosts: 
-    stoneCosts: 
-    ironCosts: 
-    productionPerlevel: 
-    maxResourcePerLevel: 
-    maxCtizenPerLevel: 
-    soldierLevelPerLevel: 
-    maxTroopsPerLevel: 
-    wallHPPerLevel: 
-  coin: 5
-  iron: 1
-  stone: 1
-  wood: 2
-  food: 2
-  citizen: 1
-  maxCoin: 200
-  maxIron: 50
-  maxStone: 50
-  maxWood: 100
+  coin: 0
+  iron: 0
+  stone: 0
+  wood: 0
+  food: 0
+  citizen: 0
+  maxCoin: 300
+  maxIron: 100
+  maxStone: 100
+  maxWood: 200
   maxFood: 100
   maxCitizen: 20
---- !u!114 &854747865
+  coinProduction: 20
+  ironProduction: 5
+  stoneProduction: 5
+  woodProduction: 10
+  foodProduction: 5
+  citizenProduction: 1
+  week: 1
+  coinText: {fileID: 222718427}
+  woodText: {fileID: 1965882481}
+  stoneText: {fileID: 348740965}
+  ironText: {fileID: 2135664555}
+  foodText: {fileID: 1513313610}
+  citizenText: {fileID: 1272700974}
+  weekText: {fileID: 1924742019}
+--- !u!114 &854747863
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11882,26 +11815,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9428d3708c7a8b478c36b2f56ce5bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinText: {fileID: 222718427}
-  woodText: {fileID: 1965882481}
-  stoneText: {fileID: 348740965}
-  ironText: {fileID: 2135664555}
-  foodText: {fileID: 1513313610}
-  citizenText: {fileID: 1272700974}
-  coinIncrease: 5
-  maxCoinLimit: 200
-  woodIncrease: 2
-  maxWoodLimit: 100
-  stoneIncrease: 1
-  maxStoneLimit: 50
-  ironIncrease: 1
-  maxIronLimit: 50
-  foodIncrease: 5
-  maxFoodLimit: 100
-  citizenIncrease: 1
-  maxCitizenLimit: 20
-  weekText: {fileID: 1924742019}
-  nextTurnButton: {fileID: 106164665}
 --- !u!1 &860033025
 GameObject:
   m_ObjectHideFlags: 0
@@ -12041,6 +11954,97 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9107421834211104548, guid: 424435a89202ddb4d834b63936c3ce6f, type: 3}
   m_PrefabInstance: {fileID: 1136922154}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &883956903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 883956904}
+  - component: {fileID: 883956907}
+  - component: {fileID: 883956906}
+  - component: {fileID: 883956905}
+  m_Layer: 5
+  m_Name: CloseButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &883956904
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883956903}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1638558081}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -3.8862915, y: 1.3280029}
+  m_SizeDelta: {x: -7.772583, y: -60.041016}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &883956905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883956903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 660ae2d0839b07641b5cce8d1f60ecd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelTooClose: {fileID: 883956903}
+  ButtonTOOpen: {fileID: 2087952630}
+  PanelClose: {fileID: 1638558080}
+--- !u!114 &883956906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883956903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &883956907
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883956903}
+  m_CullTransparentMesh: 1
 --- !u!1 &887607625
 GameObject:
   m_ObjectHideFlags: 0
@@ -12726,17 +12730,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931401208}
   m_CullTransparentMesh: 1
---- !u!114 &932550852 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6972352375977598438, guid: 4c55e9ccee9fe9c488e771d706d1ccb2, type: 3}
-  m_PrefabInstance: {fileID: 736801492}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &942339912
 GameObject:
   m_ObjectHideFlags: 0
@@ -13117,17 +13110,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966106707}
   m_CullTransparentMesh: 1
---- !u!114 &968110425 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4094645577482329711, guid: 4c55e9ccee9fe9c488e771d706d1ccb2, type: 3}
-  m_PrefabInstance: {fileID: 736801492}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &983835228
 GameObject:
   m_ObjectHideFlags: 0
@@ -14429,17 +14411,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1096773072 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1952640603417180428, guid: 4c55e9ccee9fe9c488e771d706d1ccb2, type: 3}
-  m_PrefabInstance: {fileID: 736801492}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1110962826
 GameObject:
   m_ObjectHideFlags: 0
@@ -14753,31 +14724,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340ffd7dd0ff29447a45a62051d2cf56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingData:
-    buildingName: 
-    level: 0
-    maxLevel: 10
-    coinCosts: 
-    woodCosts: 
-    stoneCosts: 
-    ironCosts: 
-    productionPerlevel: 
-    maxResourcePerLevel: 
-    maxCtizenPerLevel: 
-    soldierLevelPerLevel: 
-    maxTroopsPerLevel: 
-    wallHPPerLevel: 
-  currentLevelText: {fileID: 0}
-  nextLevelText: {fileID: 0}
-  coinCostText: {fileID: 0}
-  woodCostText: {fileID: 0}
-  stoneCostText: {fileID: 0}
-  ironCostText: {fileID: 0}
-  currentProdText1: {fileID: 0}
-  nextProdText1: {fileID: 0}
-  currentProdText2: {fileID: 0}
-  nextProdText2: {fileID: 0}
-  upgradeButton: {fileID: 0}
 --- !u!1 &1144123175
 GameObject:
   m_ObjectHideFlags: 0
@@ -16281,7 +16227,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -196.77101, y: 1.0000968}
+  m_AnchoredPosition: {x: -196.77101, y: 3.200065}
   m_SizeDelta: {x: 95.1311, y: 32.0749}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1219187452
@@ -16913,7 +16859,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -35.2734, y: -0.3513}
+  m_AnchoredPosition: {x: -29.3, y: -0.3513}
   m_SizeDelta: {x: 24.5673, y: 20.7025}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316816036
@@ -17516,15 +17462,15 @@ RectTransform:
   m_GameObject: {fileID: 1356672172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1638558081}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000061989, y: 136.9989}
-  m_SizeDelta: {x: 181.32, y: 50}
+  m_AnchoredPosition: {x: 0.45161, y: 107}
+  m_SizeDelta: {x: 180.9468, y: 48.5738}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1356672174
 MonoBehaviour:
@@ -18120,31 +18066,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340ffd7dd0ff29447a45a62051d2cf56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingData:
-    buildingName: 
-    level: 0
-    maxLevel: 10
-    coinCosts: 
-    woodCosts: 
-    stoneCosts: 
-    ironCosts: 
-    productionPerlevel: 
-    maxResourcePerLevel: 
-    maxCtizenPerLevel: 
-    soldierLevelPerLevel: 
-    maxTroopsPerLevel: 
-    wallHPPerLevel: 
-  currentLevelText: {fileID: 0}
-  nextLevelText: {fileID: 0}
-  coinCostText: {fileID: 0}
-  woodCostText: {fileID: 0}
-  stoneCostText: {fileID: 0}
-  ironCostText: {fileID: 0}
-  currentProdText1: {fileID: 0}
-  nextProdText1: {fileID: 0}
-  currentProdText2: {fileID: 0}
-  nextProdText2: {fileID: 0}
-  upgradeButton: {fileID: 0}
 --- !u!1 &1406318949
 GameObject:
   m_ObjectHideFlags: 0
@@ -18454,31 +18375,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340ffd7dd0ff29447a45a62051d2cf56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingData:
-    buildingName: 
-    level: 0
-    maxLevel: 10
-    coinCosts: 
-    woodCosts: 
-    stoneCosts: 
-    ironCosts: 
-    productionPerlevel: 
-    maxResourcePerLevel: 
-    maxCtizenPerLevel: 
-    soldierLevelPerLevel: 
-    maxTroopsPerLevel: 
-    wallHPPerLevel: 
-  currentLevelText: {fileID: 0}
-  nextLevelText: {fileID: 0}
-  coinCostText: {fileID: 0}
-  woodCostText: {fileID: 0}
-  stoneCostText: {fileID: 0}
-  ironCostText: {fileID: 0}
-  currentProdText1: {fileID: 0}
-  nextProdText1: {fileID: 0}
-  currentProdText2: {fileID: 0}
-  nextProdText2: {fileID: 0}
-  upgradeButton: {fileID: 0}
 --- !u!1 &1418773415
 GameObject:
   m_ObjectHideFlags: 0
@@ -18513,7 +18409,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -33.3936, y: -0.3513}
+  m_AnchoredPosition: {x: -29.5, y: -0.3513}
   m_SizeDelta: {x: 24.5673, y: 20.7025}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1418773417
@@ -19140,7 +19036,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 854747860}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ToggleMenuUI, Assembly-CSharp
         m_MethodName: GoToMainMenu
         m_Mode: 1
@@ -19273,7 +19169,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 854747862}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PanelSwicther, Assembly-CSharp
         m_MethodName: ShowPanelA
         m_Mode: 1
@@ -20486,7 +20382,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 239.263, y: 1.0000968}
+  m_AnchoredPosition: {x: 239.263, y: 3.200065}
   m_SizeDelta: {x: 95.1311, y: 32.0749}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1550295059
@@ -20738,17 +20634,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566756291}
   m_CullTransparentMesh: 1
---- !u!114 &1581012416 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3373477900523398594, guid: 4c55e9ccee9fe9c488e771d706d1ccb2, type: 3}
-  m_PrefabInstance: {fileID: 736801492}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1607309235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20866,31 +20751,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340ffd7dd0ff29447a45a62051d2cf56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingData:
-    buildingName: 
-    level: 0
-    maxLevel: 10
-    coinCosts: 
-    woodCosts: 
-    stoneCosts: 
-    ironCosts: 
-    productionPerlevel: 
-    maxResourcePerLevel: 
-    maxCtizenPerLevel: 
-    soldierLevelPerLevel: 
-    maxTroopsPerLevel: 
-    wallHPPerLevel: 
-  currentLevelText: {fileID: 0}
-  nextLevelText: {fileID: 0}
-  coinCostText: {fileID: 0}
-  woodCostText: {fileID: 0}
-  stoneCostText: {fileID: 0}
-  ironCostText: {fileID: 0}
-  currentProdText1: {fileID: 0}
-  nextProdText1: {fileID: 0}
-  currentProdText2: {fileID: 0}
-  nextProdText2: {fileID: 0}
-  upgradeButton: {fileID: 0}
 --- !u!1 &1616889396
 GameObject:
   m_ObjectHideFlags: 0
@@ -20999,7 +20859,7 @@ RectTransform:
   m_Father: {fileID: 1535505084}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.2850011, y: 1}
+  m_AnchorMax: {x: 0.28500107, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -21127,7 +20987,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1638558081}
   - component: {fileID: 1638558083}
-  - component: {fileID: 1638558082}
   - component: {fileID: 1638558084}
   m_Layer: 5
   m_Name: PanelRecruit
@@ -21148,6 +21007,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 883956904}
   - {fileID: 127620798}
   - {fileID: 1720910552}
   - {fileID: 1356672173}
@@ -21158,36 +21018,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1.7677994, y: 4.0485}
   m_SizeDelta: {x: 734.92, y: 318.91}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1638558082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638558080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: -2121255737086566026, guid: 4f8f8b38209e6894d9f22ce13ebeb97f, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1638558083
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21208,8 +21038,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 660ae2d0839b07641b5cce8d1f60ecd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelToClose: {fileID: 1638558080}
+  panelTooClose: {fileID: 0}
   ButtonTOOpen: {fileID: 2087952630}
+  PanelClose: {fileID: 0}
 --- !u!1 &1644667478
 GameObject:
   m_ObjectHideFlags: 0
@@ -21958,7 +21789,7 @@ RectTransform:
   m_GameObject: {fileID: 1720910551}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 791560895}
@@ -21967,8 +21798,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.3011856, y: -36.885944}
-  m_SizeDelta: {x: 555.34, y: 271.12}
+  m_AnchoredPosition: {x: -0.8817, y: -24.1216}
+  m_SizeDelta: {x: 554.1968, y: 263.3864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1720910553
 MonoBehaviour:
@@ -22569,7 +22400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015259, y: 145.26093}
+  m_AnchoredPosition: {x: 0.000010978, y: 138.3}
   m_SizeDelta: {x: 821.7899, y: 55.8889}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1757377051
@@ -23557,17 +23388,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818008074}
   m_CullTransparentMesh: 1
---- !u!114 &1819470997 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7674229175074456997, guid: 4c55e9ccee9fe9c488e771d706d1ccb2, type: 3}
-  m_PrefabInstance: {fileID: 736801492}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1828946426
 GameObject:
   m_ObjectHideFlags: 0
@@ -24175,8 +23995,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0000017881393, y: 0}
-  m_SizeDelta: {x: 1.3897705, y: 300}
+  m_AnchoredPosition: {x: -0.000002861023, y: 0}
+  m_SizeDelta: {x: 2.53302, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1880279224
 MonoBehaviour:
@@ -24301,7 +24121,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 49644099}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.9975037
+  m_Size: 0.9954503
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -24510,7 +24330,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1629810086}
   m_HandleRect: {fileID: 1629810085}
   m_Direction: 0
-  m_Value: -0.0000004818977
+  m_Value: -0.0000005257066
   m_Size: 0.28500107
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -24838,7 +24658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 319.5, y: 0.0000066757}
+  m_AnchoredPosition: {x: 320.3, y: 5}
   m_SizeDelta: {x: 75.6332, y: 25.3573}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1924742019
@@ -25127,7 +24947,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.289295, y: 1.0000968}
+  m_AnchoredPosition: {x: 20.289295, y: 3.200065}
   m_SizeDelta: {x: 95.1311, y: 32.0749}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1928234373
@@ -25474,7 +25294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -88.394104, y: 1.0000968}
+  m_AnchoredPosition: {x: -88.394104, y: 3.200065}
   m_SizeDelta: {x: 95.1311, y: 32.0749}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1944628494
@@ -25898,7 +25718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 128.89589, y: 1.0000968}
+  m_AnchoredPosition: {x: 128.89589, y: 3.200065}
   m_SizeDelta: {x: 95.1311, y: 32.0749}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1968119029
@@ -26630,31 +26450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340ffd7dd0ff29447a45a62051d2cf56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingData:
-    buildingName: 
-    level: 0
-    maxLevel: 10
-    coinCosts: 
-    woodCosts: 
-    stoneCosts: 
-    ironCosts: 
-    productionPerlevel: 
-    maxResourcePerLevel: 
-    maxCtizenPerLevel: 
-    soldierLevelPerLevel: 
-    maxTroopsPerLevel: 
-    wallHPPerLevel: 
-  currentLevelText: {fileID: 0}
-  nextLevelText: {fileID: 0}
-  coinCostText: {fileID: 0}
-  woodCostText: {fileID: 0}
-  stoneCostText: {fileID: 0}
-  ironCostText: {fileID: 0}
-  currentProdText1: {fileID: 0}
-  nextProdText1: {fileID: 0}
-  currentProdText2: {fileID: 0}
-  nextProdText2: {fileID: 0}
-  upgradeButton: {fileID: 0}
 --- !u!1 &2059475527
 GameObject:
   m_ObjectHideFlags: 0
@@ -27044,31 +26839,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340ffd7dd0ff29447a45a62051d2cf56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingData:
-    buildingName: 
-    level: 0
-    maxLevel: 10
-    coinCosts: 
-    woodCosts: 
-    stoneCosts: 
-    ironCosts: 
-    productionPerlevel: 
-    maxResourcePerLevel: 
-    maxCtizenPerLevel: 
-    soldierLevelPerLevel: 
-    maxTroopsPerLevel: 
-    wallHPPerLevel: 
-  currentLevelText: {fileID: 0}
-  nextLevelText: {fileID: 0}
-  coinCostText: {fileID: 0}
-  woodCostText: {fileID: 0}
-  stoneCostText: {fileID: 0}
-  ironCostText: {fileID: 0}
-  currentProdText1: {fileID: 0}
-  nextProdText1: {fileID: 0}
-  currentProdText2: {fileID: 0}
-  nextProdText2: {fileID: 0}
-  upgradeButton: {fileID: 0}
 --- !u!1 &2085077828
 GameObject:
   m_ObjectHideFlags: 0
@@ -27404,7 +27174,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 854747862}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PanelSwicther, Assembly-CSharp
         m_MethodName: ShowPanelB
         m_Mode: 1

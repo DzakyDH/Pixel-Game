@@ -20,22 +20,8 @@ public class DataBuilding
     public int[] maxTroopsPerLevel;
 
     public int[] wallHPPerLevel;
-    public bool CanUpgrade()
-    {
-        if (IsMaxLevel()) return false;
-
-        int castleLevel = KingdomManajer.Instance.castleLevel;
-        return level < maxLevel && level < castleLevel;
-    }
-    public bool IsMaxLevel()
-    {
-        return level >= maxLevel;
-    }
-
     public int GetCost(ResourceType type)
     {
-        if (IsMaxLevel()) return 0;
-
         return type switch
         {
             ResourceType.Coin => coinCosts.Length > level ? coinCosts[level] : 0,
@@ -44,12 +30,6 @@ public class DataBuilding
             ResourceType.Iron => ironCosts.Length > level ? ironCosts[level] : 0,
             _ => 0,
         };
-    }
-
-    public void Upgrade()
-    {
-        if (!IsMaxLevel())
-            level++;
     }
     #region Getter Data
     public int GetCurrentProduction() => GetValue(productionPerlevel);
